@@ -24,7 +24,7 @@ export default function AdminProducts() {
                 <tr>
                   <th className="text-left font-medium px-5 py-3">Product</th>
                   <th className="text-left font-medium px-3 py-3">Category</th>
-                  <th className="text-left font-medium px-3 py-3">Price (PKR)</th>
+                  <th className="text-left font-medium px-3 py-3">Price ($)</th>
                   <th className="text-left font-medium px-3 py-3">Stock</th>
                   <th className="text-left font-medium px-3 py-3">Featured</th>
                   <th className="text-left font-medium px-3 py-3">Active</th>

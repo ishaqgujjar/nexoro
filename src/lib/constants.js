@@ -6,10 +6,10 @@ export const BRAND = {
 };
 
 export const PAYMENT_DETAILS = {
-  bank_name: 'Standard Chartered Bank',
-  account_title: 'NEXORO Private Limited',
-  account_number: '0100 2233 4455 6677',
-  iban: 'PK00 SCBL 0000 0011 2233 4455',
+  bank_name: 'WISE Bank',
+  account_title: 'CLOKNET LLC',
+  account_number: '510837837751775',
+  iban: 'PK00 SCBL **83 **** **** 4455',
   currency: 'USD',
 };
 
