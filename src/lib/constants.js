@@ -1,8 +1,8 @@
 export const BRAND = {
   name: 'NEXORO',
   tagline: 'Innovative Products for Everyday Life',
-  email: 'info@nexoro.site',
-  website: 'https://nexoro.site',
+  email: 'nexoroworld@gmail.com',
+  website: 'https://nexoro.business',
 };
 
 export const PAYMENT_DETAILS = {
