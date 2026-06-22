@@ -1,94 +1,199 @@
-// Initial demo catalogue — mirrors the original store (5 categories, 10 products,
-// 8 testimonials, sample reviews). Images are generated placeholders until you
-// upload real photos from the admin panel.
+// Your live catalogue — 4 Nexoro products.
+// To add a product photo: drop the image file into the public/ folder,
+// then uncomment the `image:` line and set it to '/your-file-name.jpg'.
 
 export const categories = [
   { id: 'c1', name: 'Home Organization', slug: 'home-organization' },
   { id: 'c2', name: 'Fitness & Wellness', slug: 'fitness-wellness' },
   { id: 'c3', name: 'Lifestyle Accessories', slug: 'lifestyle-accessories' },
   { id: 'c4', name: 'Kitchen & Dining', slug: 'kitchen-dining' },
-  { id: 'c5', name: 'Tech & Everyday', slug: 'tech-everyday' },
 ];
 
 export const products = [
   {
-    id: 'p1', name: 'Ember Aroma Diffuser', slug: 'ember-aroma-diffuser', categoryId: 'c3',
-    tagline: 'Calm, scented ambience for any room.',
-    description: 'A whisper-quiet ultrasonic diffuser with a warm ember glow and up to 10 hours of continuous mist. Pairs beautifully with your favourite essential oils to turn any space into a retreat.\n\nAuto shut-off, 300ml tank, and soft adjustable lighting.',
-    price: 5499, compareAtPrice: 7299, stock: 120, isFeatured: true, isActive: true,
-  },
-  {
-    id: 'p2', name: 'Aura Smart Water Bottle', slug: 'aura-smart-water-bottle', categoryId: 'c2',
-    tagline: 'Hydration that reminds you to drink.',
-    description: 'Insulated stainless-steel bottle with a subtle glow reminder and 24-hour cold retention. Keeps you on track through workouts, desk days, and travel.\n\n600ml, leak-proof, BPA-free.',
-    price: 3999, compareAtPrice: null, stock: 80, isFeatured: true, isActive: true,
-  },
-  {
-    id: 'p3', name: 'Nimbus Desk Organizer', slug: 'nimbus-desk-organizer', categoryId: 'c1',
-    tagline: 'A tidy desk, a clearer mind.',
-    description: 'A multi-compartment organizer in warm matte finish that keeps stationery, devices, and cables exactly where you need them. Designed to look as good as it works.',
-    price: 2899, compareAtPrice: 3499, stock: 150, isFeatured: true, isActive: true,
-  },
-  {
-    id: 'p4', name: 'Lumen LED Reading Lamp', slug: 'lumen-led-reading-lamp', categoryId: 'c5',
-    tagline: 'Gentle, eye-friendly light on demand.',
-    description: 'A dimmable desk lamp with three colour temperatures and a flexible neck. Touch controls and a USB-C port make late nights easy on the eyes.',
-    price: 4499, compareAtPrice: null, stock: 64, isFeatured: true, isActive: true,
-  },
-  {
-    id: 'p5', name: 'Verde Herb Garden Kit', slug: 'verde-herb-garden-kit', categoryId: 'c4',
-    tagline: 'Fresh herbs on your kitchen counter.',
-    description: 'Everything you need to grow basil, mint, and coriander indoors — self-watering pots, premium soil discs, and seeds. A little greenery for everyday cooking.',
-    price: 3299, compareAtPrice: 3999, stock: 90, isFeatured: false, isActive: true,
-  },
-  {
-    id: 'p6', name: 'Stride Resistance Band Set', slug: 'stride-resistance-band-set', categoryId: 'c2',
-    tagline: 'A full gym that fits in a drawer.',
-    description: 'Five graded resistance bands with handles, door anchor, and ankle straps. From rehab to strength training, a complete portable workout.',
-    price: 2499, compareAtPrice: 3199, stock: 200, isFeatured: true, isActive: true,
-  },
-  {
-    id: 'p7', name: 'Cove Storage Baskets (Set of 3)', slug: 'cove-storage-baskets', categoryId: 'c1',
-    tagline: 'Soft structure for every shelf.',
-    description: 'Woven cotton-rope baskets in three sizes with sturdy handles. Tame toys, towels, and clutter while adding warmth to any room.',
-    price: 3799, compareAtPrice: null, stock: 110, isFeatured: false, isActive: true,
-  },
-  {
-    id: 'p8', name: 'Brew Pour-Over Coffee Set', slug: 'brew-pour-over-coffee-set', categoryId: 'c4',
-    tagline: 'Cafe-quality coffee, made slowly.',
-    description: 'A borosilicate glass carafe, reusable stainless filter, and matching dripper. Everything for a clean, full-bodied pour-over at home.',
-    price: 4899, compareAtPrice: 5999, stock: 70, isFeatured: true, isActive: true,
-  },
-  {
-    id: 'p9', name: 'Pulse Wireless Charger Pad', slug: 'pulse-wireless-charger-pad', categoryId: 'c5',
-    tagline: 'Set it down. It charges.',
-    description: 'A slim 15W fast wireless pad with a soft-touch top and anti-slip base. Case-friendly and indicator-lit, it keeps your desk cable-free.',
-    price: 2999, compareAtPrice: 3799, stock: 130, isFeatured: false, isActive: true,
-  },
-  {
-    id: 'p10', name: 'Drift Weighted Blanket', slug: 'drift-weighted-blanket', categoryId: 'c3',
-    tagline: 'The calm of a gentle embrace.',
-    description: 'A 7kg weighted blanket with breathable cotton cover and evenly distributed glass beads. Designed to help you settle and sleep deeper.',
-    price: 7999, compareAtPrice: 9499, stock: 45, isFeatured: false, isActive: true,
-  },
-].map((p) => ({ ...p, image: null, createdAt: new Date(Date.now() - Math.random() * 1e9).toISOString() }));
+    id: 'p1',
+    name: 'Nexoro 5-Layer Rotating Belt Organizer',
+    slug: 'nexoro-5-layer-rotating-belt-organizer',
+    categoryId: 'c1',
+    tagline: 'Keep Every Belt Perfectly Organized with the Nexoro 5-Layer Rotating Belt Organizer.',
+    description: `Nexoro 5-Layer Rotating Transparent Belt Organizer
 
-export const reviews = [
-  { id: 'r1', productId: 'p1', name: 'Sana M.', rating: 5, comment: 'The glow is so soothing and the mist lasts all evening. Looks gorgeous on my shelf.', isApproved: true, createdAt: '2026-01-12T10:00:00Z' },
-  { id: 'r2', productId: 'p1', name: 'Hamza R.', rating: 4, comment: 'Quiet and effective. Wish the tank were a little bigger, but lovely overall.', isApproved: true, createdAt: '2026-02-02T10:00:00Z' },
-  { id: 'r3', productId: 'p2', name: 'Ayesha K.', rating: 5, comment: 'Keeps water cold the whole day and the reminder actually helps me drink more.', isApproved: true, createdAt: '2026-02-18T10:00:00Z' },
-  { id: 'r4', productId: 'p3', name: 'Bilal A.', rating: 5, comment: 'My desk has never looked this clean. Sturdy and premium feeling.', isApproved: true, createdAt: '2026-01-28T10:00:00Z' },
-  { id: 'r5', productId: 'p6', name: 'Zara F.', rating: 5, comment: 'Perfect for home workouts. The bands feel durable and the anchor is handy.', isApproved: true, createdAt: '2026-03-04T10:00:00Z' },
-  { id: 'r6', productId: 'p8', name: 'Usman T.', rating: 4, comment: 'Makes a smooth cup. The glass feels high quality.', isApproved: true, createdAt: '2026-03-10T10:00:00Z' },
-];
+Keep your belt collection neat, organized, and easy to access with the Nexoro 5-Layer Rotating Transparent Belt Organizer. Designed for maximum storage in minimal space, this organizer features five transparent rotating layers that allow you to neatly arrange and display multiple belts while keeping them protected from dust and clutter.
 
-export const testimonials = [
-  { id: 't1', name: 'Sana Malik', role: 'Verified Buyer · Karachi', rating: 5, quote: 'Every NEXORO product I have ordered feels considered and well made. Shopping here is a joy.', isActive: true },
-  { id: 't2', name: 'Hamza Raza', role: 'Verified Buyer · Lahore', rating: 5, quote: 'Fast replies, honest pricing, and the quality genuinely surprised me. Highly recommended.', isActive: true },
-  { id: 't3', name: 'Ayesha Khan', role: 'Verified Buyer · Islamabad', rating: 5, quote: 'Beautiful packaging and the products just work. This is my go-to for gifts now.', isActive: true },
-  { id: 't4', name: 'Bilal Ahmed', role: 'Verified Buyer · Faisalabad', rating: 4, quote: 'Great everyday essentials with a premium feel. The desk organizer changed my workspace.', isActive: true },
-  { id: 't5', name: 'Zara Farooq', role: 'Verified Buyer · Multan', rating: 5, quote: 'Customer support was patient and helpful. The whole experience felt trustworthy.', isActive: true },
-  { id: 't6', name: 'Usman Tariq', role: 'Verified Buyer · Rawalpindi', rating: 5, quote: 'Reliable products that last. I keep coming back because the standard never drops.', isActive: true },
-  { id: 't7', name: 'Mariam S.', role: 'Verified Buyer · Bhakkar', rating: 5, quote: 'Ordering was simple and the bank-transfer process was clear. Items arrived perfectly.', isActive: true },
-  { id: 't8', name: 'Imran N.', role: 'Verified Buyer · Hyderabad', rating: 4, quote: 'Thoughtful design and fair prices. NEXORO has become my default for home upgrades.', isActive: true },
-];
+The smooth 360° rotating design makes it effortless to find the belt you need, while the clear construction lets you view your entire collection at a glance. Its compact, modern design fits perfectly in wardrobes, closets, dressing rooms, or shelves, helping you maintain a tidy and organized space.
+
+Features
+- 5-Layer Large Capacity – Holds multiple belts while maximizing storage space.
+- 360° Rotating Design – Quickly access any belt with a smooth rotating mechanism.
+- Transparent Construction – Easily view your belt collection without opening every compartment.
+- Space-Saving Storage – Keeps closets, wardrobes, and shelves clean and organized.
+- Premium Durable Material – Built from high-quality transparent plastic for long-lasting use.
+- Modern & Elegant Design – Complements any wardrobe or dressing area.
+- Easy to Use – Store and retrieve belts effortlessly.
+- Multi-Purpose Organizer – Can also be used for ties, scarves, watches, and other fashion accessories.
+
+Specifications
+Brand: Nexoro
+Product Type: Rotating Belt Organizer
+Layers: 5 Layers
+Material: Premium Transparent Plastic
+Color: Transparent
+Ideal For: Belts, ties, scarves, watches, and fashion accessories
+
+Upgrade your wardrobe organization with the Nexoro 5-Layer Rotating Belt Organizer—the smart, stylish, and space-saving solution for keeping your accessories perfectly arranged and always within reach.`,
+    price: 40,
+    compareAtPrice: 43.6,
+    stock: 100,
+    isFeatured: true,
+    isActive: true,
+    // image: '/belt-organizer.jpg',
+  },
+  {
+    id: 'p2',
+    name: 'Nexoro Adjustable Psoas Release Tool',
+    slug: 'nexoro-adjustable-psoas-release-tool',
+    categoryId: 'c2',
+    tagline: 'Nexoro – Unlock Better Mobility, Relieve Deep Muscle Tension, and Move with Confidence.',
+    description: `Nexoro Adjustable Psoas Release Tool
+
+Experience targeted muscle relief with the Nexoro Adjustable Psoas Release Tool, expertly designed to help release tight hip flexors, improve mobility, and support faster recovery. Whether you're an athlete, fitness enthusiast, or someone dealing with muscle stiffness from daily activities, this versatile tool delivers deep, precise pressure to help relieve tension and enhance flexibility.
+
+Key Features
+
+Deep Psoas & Hip Flexor Release
+The Nexoro Psoas Release Tool applies focused, therapist-inspired pressure to the psoas, hip flexors, iliacus, and surrounding muscles. It helps reduce lower back discomfort, improve posture, restore natural hip mobility, and promote greater comfort during everyday movement and physical activity.
+
+Fully Adjustable for Every Body Type
+Designed with 3 interchangeable massage heads and an 8-position adjustable base, this tool allows you to customize the width and pressure to suit different body sizes and muscle groups. Achieve precise deep tissue massage for the hips, back, hamstrings, glutes, and more.
+
+Multi-Purpose Myofascial & Trigger Point Therapy
+More than just a hip release tool, it effectively targets multiple muscle groups including the thighs, calves, upper back, chest, shoulders, triceps, and glutes. It helps release muscle knots, improve circulation, support warm-ups, accelerate post-workout recovery, and maintain long-term muscle health.
+
+Portable & Travel-Friendly Design
+Compact and lightweight, the Nexoro Psoas Release Tool easily fits into your gym bag, backpack, office drawer, or travel luggage. Enjoy professional-quality muscle relief wherever you are—at home, in the gym, at work, or while traveling.
+
+Designed for Safe & Effective Use
+Developed using insights from physical therapists and athletes, the tool includes an easy-to-follow quick-start guide to help you get the best results. For personalized treatment or existing medical conditions, consulting a healthcare professional is recommended.
+
+Specifications
+Brand: Nexoro
+Product Type: Adjustable Psoas Release Tool
+Material: Premium Durable Construction
+Adjustability: 8-Level Width Adjustment
+Massage Heads: 3 Interchangeable Heads
+Best For: Psoas, Hip Flexors, Iliacus, Lower Back, Hamstrings, Glutes, Thighs, Calves, Chest, Shoulders, and Trigger Point Therapy
+
+Restore mobility, relieve deep muscle tension, and recover faster with the Nexoro Adjustable Psoas Release Tool—your reliable solution for effective myofascial release and everyday muscle care.`,
+    price: 38,
+    compareAtPrice: 40,
+    stock: 100,
+    isFeatured: true,
+    isActive: true,
+    // image: '/psoas-release-tool.jpg',
+  },
+  {
+    id: 'p3',
+    name: 'Nexoro Leakproof Salad Jar 1000ml',
+    slug: 'nexoro-leakproof-salad-jar-1000ml',
+    categoryId: 'c4',
+    tagline: 'Nexoro – Freshness That Travels With You.',
+    description: `Nexoro 1000ml Leakproof Salad Jar with Dressing Cup
+
+Enjoy fresh, healthy meals wherever life takes you with the Nexoro 1000ml Leakproof Salad Jar. Thoughtfully designed for busy professionals, students, fitness enthusiasts, and travelers, this premium meal prep container keeps your salads, fruits, and snacks fresh, crisp, and ready to enjoy.
+
+Featuring a leakproof lid, integrated dressing cup, and innovative side-opening design, the Nexoro Salad Jar makes meal preparation simple while preventing spills and keeping dressings separate until you're ready to eat. Whether you're heading to the office, gym, school, or on a weekend adventure, your meals stay fresh, delicious, and perfectly organized.
+
+Key Features
+
+Keeps Your Meals Fresh Longer
+The airtight, leakproof seal locks in freshness, flavor, and nutrients while protecting your food from spills. Store salads, fruits, vegetables, pasta, yogurt, or snacks with confidence and enjoy them just as fresh as when you packed them.
+
+Built-In Dressing Cup
+The included dressing container keeps sauces, dressings, and toppings separate from your ingredients until mealtime. Simply add your dressing, shake, and enjoy a perfectly mixed salad without soggy greens.
+
+Convenient Side-Opening Design
+The unique side-opening design provides easy access to your meal while making filling, mixing, and cleaning effortless. Simply shake to evenly coat your ingredients for a fresh and flavorful salad every time.
+
+100% Leakproof & Spill-Resistant
+Designed with a secure sealing system, the Nexoro Salad Jar prevents leaks and spills, making it ideal for carrying in backpacks, handbags, lunch bags, or gym bags without worry.
+
+Food-Grade & Durable Material
+Crafted from high-quality, BPA-free food-grade PP material, this salad jar is safe, durable, lightweight, and built for everyday use. Its sturdy construction resists wear while maintaining excellent hygiene.
+
+Easy to Clean
+The wide opening allows for quick filling and hassle-free cleaning. Every corner is easy to reach, helping maintain cleanliness after every use.
+
+Perfect for Life on the Go
+Its compact, portable design fits easily into lunch bags, backpacks, and travel bags, making it the perfect companion for work, school, the gym, picnics, camping, road trips, and daily commuting.
+
+Transparent Design
+The clear container lets you instantly see what's inside, making it easy to monitor freshness and quickly grab the meal you've prepared.
+
+Specifications
+Brand: Nexoro
+Product Type: Leakproof Salad Jar
+Capacity: 1000ml
+Material: Premium BPA-Free Food-Grade PP
+Features: Leakproof Lid, Side Opening, Integrated Dressing Cup, Portable Design
+Ideal For: Salads, Fruits, Vegetables, Meal Prep, Yogurt, Snacks, Pasta & Healthy Lunches`,
+    price: 21.5,
+    compareAtPrice: 30,
+    stock: 100,
+    isFeatured: false,
+    isActive: true,
+    // image: '/salad-jar.jpg',
+  },
+  {
+    id: 'p4',
+    name: 'Nexoro Mahjong Holder and Pusher Set',
+    slug: 'nexoro-mahjong-holder-and-pusher-set',
+    categoryId: 'c3',
+    tagline: 'Nexoro – Play Smarter. Organize Better. Enjoy Every Mahjong Game.',
+    description: `Nexoro Mahjong Holder & Pusher Set
+
+Take your Mahjong experience to the next level with the Nexoro Mahjong Holder & Pusher Set. Designed for smooth gameplay and effortless tile organization, this premium accessory helps players focus on strategy instead of managing tiles. Whether you're playing with family, friends, at a club, or in tournaments, the Nexoro Mahjong Holder & Pusher Set delivers stability, convenience, and professional-level performance.
+
+Its dual-function design combines a sturdy tile rack with a smooth pusher, making it easy to build walls, organize tiles, and keep every game neat and efficient. Built from durable, high-quality materials, it is designed for years of reliable use while remaining lightweight and portable.
+
+Key Features
+
+Dual-Function Holder & Pusher
+Designed to serve as both a tile holder and wall pusher, allowing players to organize tiles neatly while making wall building and gameplay faster and more efficient.
+
+Smooth & Comfortable Gameplay
+Keep your Mahjong tiles securely arranged throughout the game. The ergonomic design makes tile management effortless, helping you stay focused on your strategy instead of adjusting your tiles.
+
+Stable Anti-Tip Design
+Engineered with a reinforced structure that minimizes tipping and movement while pushing Mahjong walls, providing greater stability during casual games and competitive matches.
+
+Universal Compatibility
+Compatible with most standard American Mahjong tile sets and wall spacing, making it an excellent accessory for home games, clubs, tournaments, and travel.
+
+Portable & Stackable
+Lightweight and stackable for easy storage and transportation. Perfect for family gatherings, game nights, vacations, clubs, and tournaments.
+
+Durable & Easy to Maintain
+Made from premium-quality materials that resist yellowing, deformation, and odors. The smooth surface is easy to clean and designed for long-lasting performance with minimal maintenance.
+
+Perfect for Every Occasion
+Whether you're hosting a game night at home, participating in club events, or traveling with friends, the Nexoro Mahjong Holder & Pusher Set keeps your game organized and enjoyable.
+
+Specifications
+Brand: Nexoro
+Product Type: Mahjong Holder & Pusher Set
+Material: Premium Durable Plastic
+Design: Dual-Function Tile Holder & Wall Pusher
+Compatibility: Fits Most Standard American Mahjong Tile Sets
+Ideal For: Home, Clubs, Tournaments, Family Game Nights, Parties, and Travel`,
+    price: 39,
+    compareAtPrice: 45,
+    stock: 100,
+    isFeatured: false,
+    isActive: true,
+    // image: '/mahjong-set.jpg',
+  },
+].map((p) => ({ image: null, ...p, createdAt: new Date().toISOString() }));
+
+export const reviews = [];
+
+export const testimonials = [];
