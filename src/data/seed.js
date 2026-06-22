@@ -46,7 +46,7 @@ Upgrade your wardrobe organization with the Nexoro 5-Layer Rotating Belt Organiz
     stock: 100,
     isFeatured: true,
     isActive: true,
-    image: '/WhatsApp Image 2026-06-17 at 12.30.55 PM (1).jpeg',
+    image: '/nexoro.jpeg',
   },
   {
     id: 'p2',
@@ -89,7 +89,7 @@ Restore mobility, relieve deep muscle tension, and recover faster with the Nexor
     stock: 100,
     isFeatured: true,
     isActive: true,
-    // image: '/psoas-release-tool.jpg',
+    image: '/WhatsApp Image 2026-06-17 at 12.30.55 PM (1).jpeg',
   },
   {
     id: 'p3',
@@ -141,7 +141,7 @@ Ideal For: Salads, Fruits, Vegetables, Meal Prep, Yogurt, Snacks, Pasta & Health
     stock: 100,
     isFeatured: false,
     isActive: true,
-    // image: '/salad-jar.jpg',
+    image: '/product3.jpg',
   },
   {
     id: 'p4',
@@ -190,7 +190,7 @@ Ideal For: Home, Clubs, Tournaments, Family Game Nights, Parties, and Travel`,
     stock: 100,
     isFeatured: false,
     isActive: true,
-    // image: '/mahjong-set.jpg',
+    image: '/product4.jpg',
   },
 ].map((p) => ({ image: null, ...p, createdAt: new Date().toISOString() }));
 
