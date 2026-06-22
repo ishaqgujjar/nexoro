@@ -46,7 +46,7 @@ Upgrade your wardrobe organization with the Nexoro 5-Layer Rotating Belt Organiz
     stock: 100,
     isFeatured: true,
     isActive: true,
-    // image: '/belt-organizer.jpg',
+    image: '/WhatsApp Image 2026-06-17 at 12.30.55 PM (1).jpeg',
   },
   {
     id: 'p2',
